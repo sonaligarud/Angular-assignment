@@ -1,0 +1,100 @@
+<section class="dashboard-header mb-4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12">
+        <h5 class="logo font-weight-bold">your <span>logo</span>
+        </h5>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section bg-light">
+  <div class="container-fluid">
+    <div class="row pb-2">
+      <div class="col-xl-6">
+        <h6>Lorem Ipsum is simply dummy text</h6>
+      </div>
+      <div class="col-xl-6">
+        <div class="float-right">
+          <button class="btn btn-primary" type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-12">
+        <table class="table table-bordered table-responsive1 table-fluid bg-white">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th data-sortable="true" (click)="sort('username')">
+                User Name 
+                <i class="fa fa-sort" aria-hidden="true" *ngIf="sortDirections['username'] !== 'asc' && sortDirections['username'] !== 'desc'"></i>
+                <i class="fa fa-sort-asc" aria-hidden="true" *ngIf="sortDirections['username'] === 'asc'"></i>
+                <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="sortDirections['username'] === 'desc'"></i>
+              </th>
+              <th data-sortable="true" (click)="sort('phoneNumber')">
+                Phone Number
+                <i class="fa fa-sort" aria-hidden="true" *ngIf="sortDirections['phoneNumber'] !== 'asc' && sortDirections['phoneNumber'] !== 'desc'"></i>
+                <i class="fa fa-sort-asc" aria-hidden="true" *ngIf="sortDirections['phoneNumber'] === 'asc'"></i>
+                <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="sortDirections['phoneNumber'] === 'desc'"></i>
+              </th>
+              <th data-sortable="true" (click)="sort('email')">
+                Email ID
+                <i class="fa fa-sort" aria-hidden="true" *ngIf="sortDirections['email'] !== 'asc' && sortDirections['email'] !== 'desc'"></i>
+                <i class="fa fa-sort-asc" aria-hidden="true" *ngIf="sortDirections['email'] === 'asc'"></i>
+                <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="sortDirections['email'] === 'desc'"></i>
+              </th>
+              <th class="text-right pr-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items">
+              <th scope="row">
+                <input type="checkbox" />
+              </th>
+              <td>{{item.username}}</td>
+              <td>{{item.phonenumber}}</td>
+              <td>{{item.email}}</td>
+              <td class="text-right pr-4">
+                <i class="fa fa-trash-o" aria-hidden="true" title="Delete" data-toggle="modal" data-target="#myModal"></i>
+                <i class="fa fa-arrows-alt pl-2" aria-hidden="true" title="Re Order"></i>
+            </td>
+              <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+              <h4 class="modal-title">Confirm Delete</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+              <p>Are you sure you want to delete this item?</p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+
+      </div>
+  </div>
+</div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

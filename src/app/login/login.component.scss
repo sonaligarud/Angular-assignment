@@ -1,0 +1,64 @@
+$color_1: #d94e3b;
+$color_2: #dc3545;
+$color_3: #a4a9af;
+$background-color_1: white;
+$background-color_2: #fff1f1;
+
+.gradient-custom-2 {
+	background: #fff1f1;
+}
+.content-section {
+	h4 {
+		font-size: 60px;
+		line-height: 70px;
+		font-weight: 300;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+.input-group-prepend {
+	span {
+		background-color: $background-color_1;
+		border-right: none;
+	}
+}
+.form-control {
+	border-left: none;
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+.clock {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-color: $background-color_2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	i {
+		font-size: 30px;
+		color: $color_1;
+	}
+}
+#radius-shape {
+	right: -25px;
+	width: 300px;
+	height: 300px;
+	background-image: url('../../assets/images/audio-video-chat.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow: hidden;
+}
+.error-message {
+	display: block;
+	margin-top: .25rem;
+	font-size: 80%;
+	color: $color_2;
+}
+.grey-color {
+	color: $color_3;
+	font-size: 14px;
+}

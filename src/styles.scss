@@ -1,0 +1,21 @@
+$color_1: #d94e3b;
+$font-family_1: 'Raleway', sans-serif;
+$button-bg_1: #d94e3b;
+
+/* global Font */
+@font-face {
+	font-family: 'Raleway', sans-serif;
+	src: url('./assets/fonts/Raleway-Medium.ttf');
+}
+body {
+	font-family: $font-family_1;
+}
+button.btn.btn-primary {
+	background-color: $button-bg_1;
+	border: 1px;
+}
+.logo.font-weight-bold {
+	span {
+		color: $color_1;
+	}
+}
